@@ -8,4 +8,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="EditCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="CheckinForm.cs" />
+  </ItemGroup>
+
 </Project>
