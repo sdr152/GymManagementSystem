@@ -1,3 +1,4 @@
+using System.Data;
 using System.Data.SQLite;
 
 
@@ -12,29 +13,69 @@ namespace GymManagementSystem
             InitializeComponent();
 
             // Connect to DB
-            
             string connectionString = $"Data Source={dbPath};Version=3;";
             SQLiteConnection connection = new SQLiteConnection(connectionString);
             {
                 connection.Open();
-                // Perform db operations here
                 string query = $"SELECT name FROM sqlite_master WHERE type='table' AND name='{tableName}'";
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     object result = command.ExecuteScalar();
-                    if (result != null)
+                    if (result == null)
                     {
-                        // Table exists
-                        Console.WriteLine("Table already exists!");
-                    }
-                    else
-                    {
-                        // Table does not exists
+                        // Table does not exist.
                         Console.WriteLine("Table does not exists!");
                         command.CommandText = $"CREATE TABLE {tableName} (Identidad INTEGER, NombreCompleto TEXT, Status TEXT, TipoMembresia TEXT, FechaPago DATE, DiasMora INTEGER )";
                         command.ExecuteNonQuery();
                     }
-                    
+                    // Retrieve data from sqlite DB
+                    string query2 = $"SELECT * FROM {tableName}";
+                    SQLiteCommand command2 = new SQLiteCommand(query2, connection);
+                    SQLiteDataReader reader = command2.ExecuteReader();
+
+                    // Create a DataTable to store the results
+                    DataTable dataTable = new DataTable();
+
+                    // Define columns in the dataTable
+                    for (int i = 0; i < reader.FieldCount; i++)
+                    {
+                        string columnName = reader.GetName(i);
+                        Type columnType = reader.GetFieldType(i);
+                        dataTable.Columns.Add(columnName, columnType);
+                    }
+
+                    while (reader.Read())
+                    {
+                        DataRow row = dataTable.NewRow();
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            if (reader.IsDBNull(i))
+                            {
+                                row[i] = DBNull.Value;
+                            }
+                            else
+                            {
+                                if (dataTable.Columns[i].DataType == typeof(DateTime))
+                                {
+                                    string dateString = reader.GetString(i);
+                                    if (DateTime.TryParseExact(dateString, "M/d/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime dateValue))
+                                    {
+                                        row[i] = dateValue;
+                                    }
+                                    else
+                                    {
+                                        row[i] = DBNull.Value;
+                                    }
+                                }
+                                else
+                                {
+                                    row[i] = reader.GetValue(i);
+                                }
+                            }
+                        }
+                        dataTable.Rows.Add(row);
+                    }
+                    dataGridView1.DataSource = dataTable;
                 }
             }
 
