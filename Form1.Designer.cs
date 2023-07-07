@@ -37,6 +37,7 @@
             button3 = new Button();
             pictureBox1 = new PictureBox();
             label2 = new Label();
+            button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -68,7 +69,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(618, 118);
+            textBox1.Location = new Point(835, 91);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(183, 23);
@@ -136,11 +137,23 @@
             label2.TabIndex = 11;
             label2.Text = "Colonia Kennedy, Calle del Comercio";
             // 
+            // button4
+            // 
+            button4.BackgroundImageLayout = ImageLayout.Center;
+            button4.Location = new Point(531, 107);
+            button4.Name = "button4";
+            button4.Size = new Size(157, 34);
+            button4.TabIndex = 12;
+            button4.Text = "Actualizar BD";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1084, 393);
+            Controls.Add(button4);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
@@ -169,5 +182,6 @@
         private Button button3;
         private PictureBox pictureBox1;
         private Label label2;
+        private Button button4;
     }
 }

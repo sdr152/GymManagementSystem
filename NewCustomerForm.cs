@@ -18,6 +18,7 @@ namespace GymManagementSystem
         {
             InitializeComponent();
             newCustomer = new NewCustomerObject();
+            
 
         }
 
@@ -71,6 +72,7 @@ namespace GymManagementSystem
                     command.ExecuteNonQuery();
                 }
             }
+            Close();
         }
     }
     public class NewCustomerObject

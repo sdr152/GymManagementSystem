@@ -33,3 +33,4 @@ C:\Users\Samuel Ramos\CSharp\GymManagementSystem\bin\Debug\net6.0-windows\runtim
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.csproj.CopyComplete
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.NewCustomerForm.resources
+C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.Properties.Resources.resources
