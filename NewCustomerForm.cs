@@ -18,8 +18,6 @@ namespace GymManagementSystem
         {
             InitializeComponent();
             newCustomer = new NewCustomerObject();
-            
-
         }
 
         // Editar No. Identidad

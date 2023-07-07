@@ -34,12 +34,6 @@
             label2 = new Label();
             button1 = new Button();
             dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -58,6 +52,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(217, 23);
             textBox2.TabIndex = 1;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // label1
             // 
@@ -86,12 +81,12 @@
             button1.TabIndex = 6;
             button1.Text = "Buscar cliente";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column5, Column2, Column3, Column4, Column6 });
             dataGridView1.Location = new Point(12, 87);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
@@ -99,44 +94,7 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(1047, 111);
             dataGridView1.TabIndex = 7;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nombre";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Status";
-            Column5.Name = "Column5";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "No. Identidad";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Tipo de Membresía";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Fecha de pago";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Dias Mora";
-            Column6.Name = "Column6";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // CheckinForm
             // 
@@ -166,11 +124,5 @@
 
         private Button button1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column6;
     }
 }

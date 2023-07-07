@@ -12,7 +12,6 @@ namespace GymManagementSystem
         public Form1()
         {
             InitializeComponent();
-
             // Connect to DB
             string connectionString = $"Data Source={dbPath};Version=3;";
             connection = new SQLiteConnection(connectionString);
@@ -30,7 +29,6 @@ namespace GymManagementSystem
                 command.CommandText = $"CREATE TABLE {tableName} (Identidad INTEGER, NombreCompleto TEXT, Status TEXT, TipoMembresia TEXT, FechaPago DATE, DiasMora INTEGER )";
                 command.ExecuteNonQuery();
             }
-
         }
 
         private void update_dataGrid1(string tableName, SQLiteConnection connection)
@@ -83,7 +81,7 @@ namespace GymManagementSystem
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
