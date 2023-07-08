@@ -28,7 +28,6 @@ namespace GymManagementSystem
         private void connect_to_sqlite(SQLiteConnection connection, string tableName)
         {
 
-
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -87,9 +86,6 @@ namespace GymManagementSystem
                 dt.Rows.Add(dr);
             }
             dataGridView1.DataSource = dt;
-            //object obj = reader.GetValue(0);
-
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

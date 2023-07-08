@@ -39,7 +39,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(286, 11);
+            textBox1.Location = new Point(191, 11);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(217, 23);
@@ -47,7 +47,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(286, 48);
+            textBox2.Location = new Point(191, 48);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(217, 23);
@@ -74,10 +74,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(12, 227);
+            button1.Location = new Point(434, 48);
             button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(158, 34);
+            button1.Size = new Size(158, 23);
             button1.TabIndex = 6;
             button1.Text = "Buscar cliente";
             button1.UseVisualStyleBackColor = true;
@@ -92,7 +92,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(1047, 111);
+            dataGridView1.Size = new Size(1047, 93);
             dataGridView1.TabIndex = 7;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -100,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 393);
+            ClientSize = new Size(1084, 191);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
             Controls.Add(label2);
