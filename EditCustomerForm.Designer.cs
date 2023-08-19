@@ -92,7 +92,8 @@
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.RowTemplate.Height = 20;
+            dataGridView1.RowTemplate.ReadOnly = true;
             dataGridView1.Size = new Size(1047, 111);
             dataGridView1.TabIndex = 7;
             // 
@@ -105,6 +106,7 @@
             button2.TabIndex = 8;
             button2.Text = "Borrar cliente";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // EditCustomerForm
             // 
@@ -135,6 +137,7 @@
 
         private Button button1;
         private DataGridView dataGridView1;
+
         private Button button2;
     }
 }

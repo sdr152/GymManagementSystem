@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GymManagementSystem
 {
     public partial class EditCustomerForm : Form
@@ -23,12 +24,18 @@ namespace GymManagementSystem
             string connectionString = $"Data Source={dbPath};Version=3;";
             connection = new SQLiteConnection(connectionString);
             connection.Open();
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
             if (textBox2.Text == "")
             {
+                return;
+            }
+            if (!long.TryParse(textBox2.Text, out long result)) 
+            {
+                textBox2.Clear();
                 return;
             }
             long id = Convert.ToInt64(textBox2.Text);
@@ -38,7 +45,7 @@ namespace GymManagementSystem
             SQLiteDataReader reader = command.ExecuteReader();
 
             DataTable dt = new DataTable();
-            for (int i=0; i<reader.FieldCount; i++)
+            for (int i = 0; i < reader.FieldCount; i++)
             {
                 string columnName = reader.GetName(i);
                 Type columnType = reader.GetFieldType(i);
@@ -47,7 +54,7 @@ namespace GymManagementSystem
             while (reader.Read())
             {
                 DataRow dr = dt.NewRow();
-                for (int i = 0; i<reader.FieldCount; i++)
+                for (int i = 0; i < reader.FieldCount; i++)
                 {
                     if (reader.IsDBNull(i))
                     {
@@ -76,6 +83,27 @@ namespace GymManagementSystem
                 dt.Rows.Add(dr);
             }
             dataGridView1.DataSource = dt;
+        }
+
+        // Erase button
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow selectedRow = dataGridView1.CurrentRow;
+            if (selectedRow == null)
+            {
+                MessageBox.Show("Favor, seleccione un registro de cliente.");
+                return;
+            }
+            DataGridViewCell idCell = selectedRow.Cells["Identidad"];
+            string idCell_string = idCell.Value.ToString();
+
+            string query = $"DELETE FROM {tableName} WHERE Identidad={idCell_string};";
+            SQLiteCommand command2 = new SQLiteCommand(query, connection);
+            command2.ExecuteNonQuery();
+            MessageBox.Show("Registro de cliente eliminado.");
+            textBox2_TextChanged(sender, e);
+            
+
         }
     }
 }

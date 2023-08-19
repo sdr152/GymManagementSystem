@@ -9,9 +9,12 @@ namespace GymManagementSystem
         string dbPath = "C:\\Users\\Samuel Ramos\\CSharp\\GymManagementSystem\\GymDatabase.db";
         string tableName = "Clientes";
         SQLiteConnection connection;
+        DateTime dateTime = DateTime.Now.AddMilliseconds(1000);
+
         public Form1()
         {
             InitializeComponent();
+            label3.Text = dateTime.ToString();
             // Connect to DB
             string connectionString = $"Data Source={dbPath};Version=3;";
             connection = new SQLiteConnection(connectionString);
@@ -67,7 +70,6 @@ namespace GymManagementSystem
                             {
                                 row[i] = DBNull.Value;
                             }
-
                         }
                         else
                         {
@@ -81,7 +83,7 @@ namespace GymManagementSystem
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)

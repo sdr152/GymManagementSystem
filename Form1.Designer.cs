@@ -38,6 +38,7 @@
             pictureBox1 = new PictureBox();
             label2 = new Label();
             button4 = new Button();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -50,7 +51,8 @@
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.RowTemplate.Height = 20;
+            dataGridView1.RowTemplate.ReadOnly = true;
             dataGridView1.Size = new Size(1047, 209);
             dataGridView1.TabIndex = 2;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -148,12 +150,22 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(815, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(203, 15);
+            label3.TabIndex = 11;
+            label3.Text = "Colonia Kennedy, Calle del Comercio";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1084, 393);
             Controls.Add(button4);
+            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(button3);
@@ -183,5 +195,6 @@
         private PictureBox pictureBox1;
         private Label label2;
         private Button button4;
+        private Label label3;
     }
 }
