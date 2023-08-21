@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace GymManagementSystem
 {
-    public partial class CheckinForm : Form
+    public partial class SearchCustomerForm : Form
     {
         string dbPath = "C:\\Users\\Samuel Ramos\\CSharp\\GymManagementSystem\\GymDatabase.db";
         string tableName = "Clientes";
         SQLiteConnection connection;
-        public CheckinForm()
+        public SearchCustomerForm()
         {
             InitializeComponent();
             string connectionString = $"Data Source={dbPath};Version=3;";
@@ -32,7 +32,16 @@ namespace GymManagementSystem
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-
+            if (textBox2.Text == "")
+            {
+                return;
+            }
+            if (!long.TryParse(textBox2.Text, out long value))
+            {
+                textBox2.Clear();
+                return;
+            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -41,7 +50,7 @@ namespace GymManagementSystem
             {
                 return;
             }
-            long id = Convert.ToInt64(textBox2.Text);
+            string id = textBox2.Text;
 
             string query = $"SELECT * FROM {tableName} WHERE Identidad = {id};";
             SQLiteCommand command = new SQLiteCommand(query, connection);

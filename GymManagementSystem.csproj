@@ -16,7 +16,10 @@
     <Compile Update="EditCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="CheckinForm.cs" />
+    <Compile Update="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SearchCustomerForm.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

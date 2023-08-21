@@ -1,6 +1,6 @@
 ﻿namespace GymManagementSystem
 {
-    partial class CheckinForm
+    partial class SearchCustomerForm
     {
         /// <summary>
         /// Required designer variable.

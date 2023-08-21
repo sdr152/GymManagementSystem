@@ -38,7 +38,7 @@ namespace GymManagementSystem
                 textBox2.Clear();
                 return;
             }
-            long id = Convert.ToInt64(textBox2.Text);
+            string id = textBox2.Text;
 
             string query = $"SELECT * FROM {tableName} WHERE Identidad={id};";
             SQLiteCommand command = new SQLiteCommand(query, connection);

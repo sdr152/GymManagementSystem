@@ -24,6 +24,7 @@ namespace GymManagementSystem
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             newCustomer.customerId = textBox1.Text;
+            
         }
 
         // Editar Nombre Completo

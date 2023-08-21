@@ -15,7 +15,6 @@ C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\refint
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.pdb
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.genruntimeconfig.cache
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\ref\GymManagementSystem.dll
-C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.CheckinForm.resources
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.EditCustomerForm.resources
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\bin\Debug\net6.0-windows\EntityFramework.SqlServer.dll
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\bin\Debug\net6.0-windows\EntityFramework.dll
@@ -34,3 +33,5 @@ C:\Users\Samuel Ramos\CSharp\GymManagementSystem\bin\Debug\net6.0-windows\runtim
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.csproj.CopyComplete
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.NewCustomerForm.resources
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.Properties.Resources.resources
+C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.SearchCustomerForm.resources
+C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.LoginForm.resources

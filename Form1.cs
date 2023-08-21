@@ -29,7 +29,7 @@ namespace GymManagementSystem
             object result = command.ExecuteScalar();
             if (result == null)
             {
-                command.CommandText = $"CREATE TABLE {tableName} (Identidad INTEGER, NombreCompleto TEXT, Status TEXT, TipoMembresia TEXT, FechaPago DATE, DiasMora INTEGER )";
+                command.CommandText = $"CREATE TABLE {tableName} (Identidad VARCHAR, NombreCompleto TEXT, Status VARCHAR, TipoMembresia VARCHAR, FechaPago DATE, DiasMora INTEGER )";
                 command.ExecuteNonQuery();
             }
         }
@@ -86,6 +86,7 @@ namespace GymManagementSystem
 
         }
 
+        // New Customer Button
         private void button1_Click(object sender, EventArgs e)
         {
             NewCustomerForm newcustomer = new NewCustomerForm();
@@ -109,8 +110,8 @@ namespace GymManagementSystem
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            CheckinForm checkin = new CheckinForm();
-            checkin.Show();
+            SearchCustomerForm searchCustomer = new SearchCustomerForm();
+            searchCustomer.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,6 +120,7 @@ namespace GymManagementSystem
             editCustomer.Show();
         }
 
+        // Update button
         private void button4_Click(object sender, EventArgs e)
         {
             update_dataGrid1(tableName, connection);
