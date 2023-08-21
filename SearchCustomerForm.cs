@@ -41,7 +41,39 @@ namespace GymManagementSystem
                 textBox2.Clear();
                 return;
             }
-            
+            string id = textBox2.Text;
+
+            string query = $"SELECT * FROM {tableName} WHERE Identidad = {id};";
+            SQLiteCommand command = new SQLiteCommand(query, connection);
+            SQLiteDataReader reader = command.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            for (int i = 0; i < reader.FieldCount; i++)
+            {
+                string columnName = reader.GetName(i);
+                Type columnType = reader.GetFieldType(i);
+                dt.Columns.Add(columnName, columnType);
+            }
+            while (reader.Read())
+            {
+                DataRow dr = dt.NewRow();
+                for (int i = 0; i < reader.FieldCount; i++)
+                {
+                    if (reader.IsDBNull(i))
+                    {
+                        dr[i] = DBNull.Value;
+                    }
+                    else
+                    {
+                        if (dt.Columns[i].GetType() == typeof(DateTime))
+                        {
+                            string dateString = reader.GetString(i);
+                        }
+                      
+                    }
+                }
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ namespace GymManagementSystem
     {
         string dbPath = "C:\\Users\\Samuel Ramos\\CSharp\\GymManagementSystem\\GymDatabase.db";
         string tableName = "Empleados";
+        string[] tableNames = { "Empleados", "Clientes" };
         SQLiteConnection connection;
         DateTime dateTime = DateTime.Now.AddMilliseconds(1000);
 
@@ -15,22 +16,32 @@ namespace GymManagementSystem
         {
             InitializeComponent();
             //label3.Text = dateTime.ToString();
+            
             // Connect to DB
             string connectionString = $"Data Source={dbPath};Version=3;";
             connection = new SQLiteConnection(connectionString);
-            connect_to_sqlite(connection, tableName);
-            
+            connect_to_sqlite(connection, tableNames);
         }
-        private void connect_to_sqlite(SQLiteConnection connection, string tableName)
+
+        private void connect_to_sqlite(SQLiteConnection connection, string[] tableNames)
         {
             connection.Open();
-            string query = $"SELECT name FROM sqlite_master WHERE type='table' AND name='{tableName}'";
+            string query = $"SELECT name FROM sqlite_master WHERE type='table' AND name='{tableNames[0]}'";
             SQLiteCommand command = new SQLiteCommand(query, connection);
             object result = command.ExecuteScalar();
             if (result == null)
             {
-                command.CommandText = $"CREATE TABLE {tableName} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Contra VARCHAR)";
+                command.CommandText = $"CREATE TABLE {tableNames[0]} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Contra VARCHAR)";
                 command.ExecuteNonQuery();
+            }
+
+            string query2 = $"SELECT name FROM sqlite_master WHERE type='table' AND name = '{tableNames[1]}'";
+            SQLiteCommand command2 = new SQLiteCommand(query2, connection);
+            object result2 = command2.ExecuteScalar();
+            if (result2 == null)
+            {
+                command2.CommandText = $"CREATE TABLE {tableNames[1]} (Identidad VARCHAR, NombreCompleto TEXT, Status VARCHAR, TipoMembresia VARCHAR, FechaPago DATE, DiasMora INTEGER )";
+                command2.ExecuteNonQuery();
             }
         }
 
@@ -52,6 +63,7 @@ namespace GymManagementSystem
             if (textBox1.Text == "manager" && textBox2.Text == "manager")
             {
                 new Form1().Show();
+                Hide();
             }
         }
     }
