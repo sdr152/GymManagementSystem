@@ -20,6 +20,7 @@ namespace GymManagementSystem
             connection = new SQLiteConnection(connectionString);
             connect_to_sqlite(connection, tableName);
             update_dataGrid1(tableName, connection);
+            
         }
         private void connect_to_sqlite(SQLiteConnection connection, string tableName)
         {
@@ -124,6 +125,13 @@ namespace GymManagementSystem
         private void button4_Click(object sender, EventArgs e)
         {
             update_dataGrid1(tableName, connection);
+        }
+
+        // New User Button
+        private void button5_Click(object sender, EventArgs e)
+        {
+            NewUserForm newUser = new NewUserForm();
+            newUser.Show();
         }
     }
 }

@@ -7,7 +7,6 @@ namespace GymManagementSystem
     public partial class LoginForm : Form
     {
         string dbPath = "C:\\Users\\Samuel Ramos\\CSharp\\GymManagementSystem\\GymDatabase.db";
-        string tableName = "Empleados";
         string[] tableNames = { "Empleados", "Clientes" };
         SQLiteConnection connection;
         DateTime dateTime = DateTime.Now.AddMilliseconds(1000);
@@ -15,8 +14,7 @@ namespace GymManagementSystem
         public LoginForm()
         {
             InitializeComponent();
-            //label3.Text = dateTime.ToString();
-            
+                        
             // Connect to DB
             string connectionString = $"Data Source={dbPath};Version=3;";
             connection = new SQLiteConnection(connectionString);
@@ -31,7 +29,7 @@ namespace GymManagementSystem
             object result = command.ExecuteScalar();
             if (result == null)
             {
-                command.CommandText = $"CREATE TABLE {tableNames[0]} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Contra VARCHAR)";
+                command.CommandText = $"CREATE TABLE {tableNames[0]} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Genero VARCHAR, Telefono VARCHAR, Contra VARCHAR)";
                 command.ExecuteNonQuery();
             }
 
@@ -63,7 +61,6 @@ namespace GymManagementSystem
             if (textBox1.Text == "manager" && textBox2.Text == "manager")
             {
                 new Form1().Show();
-                Hide();
             }
         }
     }

@@ -28,167 +28,149 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            button1 = new Button();
-            textBox1 = new TextBox();
-            comboBox1 = new ComboBox();
-            label1 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
-            button4 = new Button();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 173);
-            dataGridView1.Margin = new Padding(3, 2, 3, 2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 20;
-            dataGridView1.RowTemplate.ReadOnly = true;
-            dataGridView1.Size = new Size(1047, 209);
-            dataGridView1.TabIndex = 2;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 231);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 20;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(1197, 279);
+            this.dataGridView1.TabIndex = 2;
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(360, 107);
-            button1.Margin = new Padding(3, 2, 3, 2);
-            button1.Name = "button1";
-            button1.Size = new Size(157, 34);
-            button1.TabIndex = 3;
-            button1.Text = "Nuevo cliente";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(835, 91);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(183, 23);
-            textBox1.TabIndex = 4;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.ImeMode = ImeMode.On;
-            comboBox1.Items.AddRange(new object[] { "Nombre", "No. Identidad", "Tipo de Membresía", "Fecha de Pago" });
-            comboBox1.Location = new Point(835, 118);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(165, 23);
-            comboBox1.TabIndex = 6;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(411, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 45);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Nuevo cliente";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(393, 8);
-            label1.Name = "label1";
-            label1.Size = new Size(258, 37);
-            label1.TabIndex = 7;
-            label1.Text = "Metal Gym S de RL";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(449, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(318, 46);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Metal Gym S de RL";
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.Location = new Point(12, 107);
-            button2.Name = "button2";
-            button2.Size = new Size(157, 34);
-            button2.TabIndex = 8;
-            button2.Text = "Buscar cliente";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(14, 143);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(179, 45);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Buscar cliente";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(188, 107);
-            button3.Name = "button3";
-            button3.Size = new Size(157, 34);
-            button3.TabIndex = 9;
-            button3.Text = "Editar cliente";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(215, 143);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(179, 45);
+            this.button3.TabIndex = 9;
+            this.button3.Text = "Editar cliente";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            pictureBox1.Location = new Point(12, 8);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(209, 79);
-            pictureBox1.TabIndex = 10;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(239, 105);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(423, 45);
-            label2.Name = "label2";
-            label2.Size = new Size(203, 15);
-            label2.TabIndex = 11;
-            label2.Text = "Colonia Kennedy, Calle del Comercio";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(483, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(254, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Colonia Kennedy, Calle del Comercio";
             // 
             // button4
             // 
-            button4.BackgroundImageLayout = ImageLayout.Center;
-            button4.Location = new Point(531, 107);
-            button4.Name = "button4";
-            button4.Size = new Size(157, 34);
-            button4.TabIndex = 12;
-            button4.Text = "Actualizar BD";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button4.Location = new System.Drawing.Point(607, 143);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(179, 45);
+            this.button4.TabIndex = 12;
+            this.button4.Text = "Actualizar BD";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(815, 9);
-            label3.Name = "label3";
-            label3.Size = new Size(203, 15);
-            label3.TabIndex = 11;
-            label3.Text = "Colonia Kennedy, Calle del Comercio";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(931, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(254, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Colonia Kennedy, Calle del Comercio";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1084, 35);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(127, 29);
+            this.button5.TabIndex = 13;
+            this.button5.Text = "Ingresar usuario";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1084, 393);
-            Controls.Add(button4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(pictureBox1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(label1);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "Form1";
-            Text = "Metal Gym Manejo de Clientes";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1239, 524);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "Form1";
+            this.Text = "Metal Gym Manejo de Clientes";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
         private DataGridView dataGridView1;
         private Button button1;
-        private TextBox textBox1;
-        private ComboBox comboBox1;
         private Label label1;
         private Button button2;
         private Button button3;
@@ -196,5 +178,6 @@
         private Label label2;
         private Button button4;
         private Label label3;
+        private Button button5;
     }
 }

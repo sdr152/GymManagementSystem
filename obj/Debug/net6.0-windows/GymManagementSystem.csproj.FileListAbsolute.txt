@@ -35,3 +35,4 @@ C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymMan
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.Properties.Resources.resources
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.SearchCustomerForm.resources
 C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.LoginForm.resources
+C:\Users\Samuel Ramos\CSharp\GymManagementSystem\obj\Debug\net6.0-windows\GymManagementSystem.NewUserForm.resources
