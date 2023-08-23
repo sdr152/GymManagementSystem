@@ -64,10 +64,15 @@ namespace GymManagementSystem
             newUser.phonenumber = textBox6.Text;
         }
 
-        // Editar contra
+        // input user
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            newUser.contra = textBox7.Text;
+            newUser.username = textBox7.Text;
+        }
+        // input password
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            newUser.contra = textBox8.Text;
         }
         // Edit Button
         private void button1_Click_1(object sender, EventArgs e)
@@ -78,14 +83,13 @@ namespace GymManagementSystem
                 connection.Open();
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    command.CommandText = $"INSERT INTO {tableName} (Identidad, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Genero, Telefono, contra) VALUES ('{newUser.userId}', '{newUser.fname}', '{newUser.mname}', '{newUser.lname}', '{newUser.slname}', '{newUser.gender}', '{newUser.phonenumber}', '{newUser.contra}')";
+                    command.CommandText = $"INSERT INTO {tableName} (Identidad, PrimerNombre, SegundoNombre, PrimerApellido, SegundoApellido, Genero, Telefono, Usuario, contra) VALUES ('{newUser.userId}', '{newUser.fname}', '{newUser.mname}', '{newUser.lname}', '{newUser.slname}', '{newUser.gender}', '{newUser.phonenumber}', '{newUser.username}', '{newUser.contra}')";
                     command.ExecuteNonQuery();
                 }
             }
             Close();
         }
-
-  
+        
     }
     public class NewUserObject
     {
@@ -96,6 +100,7 @@ namespace GymManagementSystem
         public string slname { get; set; }
         public string phonenumber { get; set; }
         public string gender { get; set; }
+        public string username { get; set; }
         public string contra { get; set; }
        
 

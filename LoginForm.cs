@@ -29,7 +29,7 @@ namespace GymManagementSystem
             object result = command.ExecuteScalar();
             if (result == null)
             {
-                command.CommandText = $"CREATE TABLE {tableNames[0]} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Genero VARCHAR, Telefono VARCHAR, Contra VARCHAR)";
+                command.CommandText = $"CREATE TABLE {tableNames[0]} (Identidad VARCHAR, PrimerNombre TEXT, SegundoNombre TEXT, PrimerApellido TEXT, SegundoApellido TEXT, Genero VARCHAR, Telefono VARCHAR, Usuario VARCHAR, Contra VARCHAR)";
                 command.ExecuteNonQuery();
             }
 
