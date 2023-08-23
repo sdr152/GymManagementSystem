@@ -58,6 +58,17 @@ namespace GymManagementSystem
         // Sign in button
         private void button1_Click(object sender, EventArgs e)
         {
+            string userQuery = $"SELECT Usuario, contra FROM Empleados WHERE Empleados.Usuario = '{textBox1.Text}' AND Empleados.contra = '{textBox2.Text}';";
+            SQLiteCommand command = new SQLiteCommand(userQuery,connection);
+            object result = command.ExecuteScalar();
+            if (result != null)
+            {
+                new Form1().Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta.", "Error de autenticación.");
+            }
             if (textBox1.Text == "manager" && textBox2.Text == "manager")
             {
                 new Form1().Show();

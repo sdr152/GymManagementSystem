@@ -19,7 +19,6 @@ namespace GymManagementSystem
         {
             InitializeComponent();
             newUser = new NewUserObject();
-            
         }
 
         // Editar No. Identidad
